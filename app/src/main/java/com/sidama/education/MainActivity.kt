@@ -18,14 +18,14 @@ class MainActivity : AppCompatActivity() {
         webView.settings.domStorageEnabled = true
         webView.settings.cacheMode = WebSettings.LOAD_DEFAULT
         webView.webViewClient = WebViewClient()
-        
-        // 🔽 ONLY CHANGE THIS LINE 🔽
         webView.loadUrl("https://shime1000me.github.io/s/Sidama_ed_portal/")
-        // 🔼 ONLY CHANGE THIS LINE 🔼
     }
 
     override fun onBackPressed() {
-        if (webView.canGoBack()) webView.goBack()
-        else super.onBackPressed()
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            super.onBackPressed()
+        }
     }
 }
